@@ -1,0 +1,126 @@
+body{
+    background: rgb(203, 200, 200);
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+header details{
+    position: relative;
+}
+header details summary{
+    list-style: none;
+    cursor: pointer;
+}
+header details ul{
+    position: absolute;
+    right: 100%;
+    list-style: none;
+    width: max-content;
+    background: #fff;
+    border-radius: 5px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+header details ul li{
+    padding: 5px 15px;
+    cursor: pointer;
+    left: unset;
+}
+header details ul li:hover{
+    background: #f0f2fb;
+}
+
+
+/* -----------------brush background---------------- */
+
+.bg-container{
+    width: 100%;
+    height: 70vh;
+}
+.banner{
+    width: 100%;
+    height: 400px;
+   display: flex;
+}
+.bg-image{
+    margin-top: 100px;
+    padding-bottom: 150px;
+
+    position: absolute;
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723");
+    inset: 0 0 0 0;
+    background: red;
+    background-image: url(image/image1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    -webkit-mask-image: url(image/bg.png);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: 70%;
+    mask-image: url(image/bg.png);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 70%;
+}
+
+/* -------------------logo animation---------------- */
+.logo-animation{
+    height: 300px;
+    background: #070607d1;
+    display: flex;
+    align-items: center;
+}
+svg{
+    display: block;
+    font: 8em "sanserif";
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+}
+.copy{
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 8px;
+    stroke-dashoffset: 0%;
+    letter-spacing: 3px;
+    animation: move 5.5s linear infinite; 
+}
+.copy:nth-child(1){
+    stroke: yellow;
+    animation-delay: 1s;
+}
+.copy:nth-child(2){
+    stroke: orangered;
+    animation-delay: 2s;
+}
+.copy:nth-child(3){
+    stroke: #0058fb;
+    animation-delay: 3s;
+}
+.copy:nth-child(4){
+    stroke: pink;
+    animation-delay: 4s;
+}
+.copy:nth-child(5){
+    stroke: greenyellow;
+    animation-delay: 5s;
+}
+@keyframes move {
+    100%{
+        stroke-dashoffset: -35%;
+    }
+}
+
+
+/* -------------circle percentage----------- */
+
+
